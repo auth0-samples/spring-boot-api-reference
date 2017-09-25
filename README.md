@@ -4,6 +4,23 @@
 Demonstration app, illustrates how change password endpoint may be implemented,
 requiring APIv2 management token & secured by JWT Access token with `update:password` scope.
 
+For client examples that use this sample see:
+
+- [React Redux Embedded Login](https://github.com/auth0-samples/react-redux-embedded-login)
+- [React Native Embedded Login](https://github.com/auth0-samples/react-native-embedded-login)
+
+## Example CURL 
+
+The following CURL represents how to call this API for change password operation.
+Replace `{{JWT ACCESS TOKEN}}` with your JWT Access Token (received upon authentication using Auth0).
+
+```
+curl -X GET \
+  'http://localhost:3001/digital/password/update?newPassword=test' \
+  -H 'authorization: Bearer {{JWT ACCESS TOKEN}}' \
+  -H 'cache-control: no-cache'
+```
+
 ## Setup and Configuration
 
 Before starting you must upate auth0.properties file located in `src/main/resources 
